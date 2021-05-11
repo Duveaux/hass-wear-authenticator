@@ -30,7 +30,7 @@ app.get("/newSetup", (req, res) => {
 app.get("/status/:secretId", (req, res) => {
   if (secretMap[req.params.secretId]) {
     const helper = openHelpers[secretMap[req.params.secretId]];
-    res.sendFile(JSON.stringify(helper));
+    res.send(JSON.stringify(helper));
   } else {
     res.send("That request has expired.");
   }
