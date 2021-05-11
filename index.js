@@ -1,10 +1,11 @@
 const utils = require("./utils");
 const express = require("express");
 const app = express();
-const port = 4277;
+const port = process.env.PORT || 4277;
 const path = require("path");
 const openHelpers = {};
 const secretMap = {};
+const url = "https://hass-wear-authenticator.herokuapp.com/";
 
 // App create new set-up
 app.get("/newSetup", (req, res) => {
@@ -67,5 +68,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Now listening for hass-requests on http://localhost:${port}`);
+  console.log(`Now listening for hass-requests on ${url}`);
 });

@@ -5,7 +5,7 @@
   function openHass() {
     const url = `${
       document.getElementById("hassUrl").value
-    }/auth/authorize?client_id=http%3A%2F%2Flocalhost:4277&redirect_uri=http%3A%2F%2Flocalhost:4277%2Fauth%2F${
+    }/auth/authorize?client_id=https%3A%2F%2Fhass-wear-authenticator.herokuapp.com&redirect_uri=https%3A%2F%2Fhass-wear-authenticator.herokuapp.com%2Fauth%2F${
       window.location.href.split("/")[3]
     }%3Furl=${encodeURIComponent(
       document.getElementById("hassUrl").value
