@@ -30,7 +30,7 @@ app.get("/newSetup", (req, res) => {
 app.get("/status/:secretId", (req, res) => {
   if (secretMap[req.params.secretId]) {
     const helper = openHelpers[secretMap[req.params.secretId]];
-    res.sendFile(path.join(__dirname, "/success.html"));
+    res.sendFile(JSON.stringify(helper));
   } else {
     res.send("That request has expired.");
   }
@@ -56,7 +56,7 @@ app.get("/auth/:requestId", (req, res) => {
       url,
     };
 
-    res.send(JSON.stringify(openHelpers[req.params.requestId]));
+    res.sendFile(path.join(__dirname, "/success.html"));
   } else {
     res.send(`Unknown internal request code ${req.params.requestId}`);
   }
