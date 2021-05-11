@@ -1,0 +1,17 @@
+<h1>Hi!</h1>
+<input type="text" id="hassUrl" value="https://home.vtvc.nl" />
+<button onclick="javascript:openHass()">Authorize</button>
+<script>
+  function openHass() {
+    const url = `${
+      document.getElementById("hassUrl").value
+    }/auth/authorize?client_id=http%3A%2F%2Flocalhost:4277&redirect_uri=http%3A%2F%2Flocalhost:4277%2Fauth%2F${
+      window.location.href.split("/")[3]
+    }%3Furl=${encodeURIComponent(
+      document.getElementById("hassUrl").value
+    )}%26auth_callback%3D1
+`;
+    console.log(url);
+    window.location.href = url;
+  }
+</script>

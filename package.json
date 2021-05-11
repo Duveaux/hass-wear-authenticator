@@ -1,0 +1,12 @@
+{
+  "name": "hasswear-login-helper",
+  "version": "1.0.0",
+  "description": "Helps you sign into hasswear with your home assistant credentials",
+  "main": "index.js",
+  "author": "Vic van Cooten",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
