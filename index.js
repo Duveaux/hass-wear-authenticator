@@ -5,7 +5,7 @@ const port = process.env.PORT || 4277;
 const path = require("path");
 const openHelpers = {};
 const secretMap = {};
-const url = "https://hass-wear-authenticator.herokuapp.com/";
+const url = "https://hass-wear.herokuapp.com/";
 
 // App create new set-up
 app.get("/newSetup", (req, res) => {
